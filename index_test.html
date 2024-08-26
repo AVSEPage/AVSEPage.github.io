@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +30,7 @@
             0% {
                 text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
             }
+
             100% {
                 text-shadow: 0 0 20px #fff, 0 0 30px #ff33ff, 0 0 40px #ff33ff, 0 0 50px #ff33ff, 0 0 60px #ff33ff, 0 0 70px #ff33ff, 0 0 80px #ff33ff;
             }
@@ -48,8 +50,13 @@
         }
 
         @keyframes move {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(100%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
         }
 
         .circle {
@@ -62,8 +69,13 @@
         }
 
         @keyframes float {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-50px); }
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-50px);
+            }
         }
 
         .circle-1 {
@@ -82,6 +94,7 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Hello, World!</h1>
 
@@ -92,4 +105,5 @@
     <div class="circle circle-2"></div>
     <div class="circle circle-3"></div>
 </body>
+
 </html>

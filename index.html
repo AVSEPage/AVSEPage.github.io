@@ -5,6 +5,32 @@
   <!-- MathJax CDN -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    video.html-video {
+      max-width: 240px;
+      /* Adjust the width as needed */
+      height: auto;
+      /* Maintain aspect ratio */
+    }
+
+    img.html-image {
+      max-width: 240px;
+      /* Adjust the width as needed */
+      height: auto;
+      /* Maintain aspect ratio */
+    }
+
+    .cell {
+      text-align: center;
+      vertical-align: top;
+      padding: 10px;
+    }
+
+    .cell-content {
+      display: inline-block;
+    }
+  </style>
 </head>
 
 <body>
@@ -92,7 +118,7 @@
     <li>
       <b>
         <font color=#0000FF>VC-S\(^{2}\)E</font>
-      </b>: yyy
+      </b>: our model
     </li>
     <li><b>VC-S\(^{2}\)E(<em>w/o</em> <b>E<sub>a</sub>, E<sub>v</sub></b>)</b>: xxx.</li>
     <li><b>Noisy video</b>: xxx.</li>
@@ -105,38 +131,90 @@
       <div class="markdown has-text-centered">
         <table frame=void style="border:none; padding:0; margin:0">
           <colgroup>
-            <col width="33%">
-            <col width="33%">
-            <col width="33%">
+            <col width="16%">
+            <col width="16%">
+            <col width="16%">
+            <col width="16%">
+            <col width="16%">
+            <col width="16%">
           </colgroup>
-
-          <!-- CASE 1 -->
           <tbody>
+            <!-- CASE 1 -->
             <tr style="button-margin:0">
-              <td colspan="3" style="background-color:#FFFFFF; border:none; buttom-padding:0; margin:0">
+              <td colspan="6" style="background-color:#FFFFFF; border:none; buttom-padding:0; margin:0">
                 <b>
                   <font size="large" color="blue">
-                    zzz
+                    demo 0
                   </font>
                 </b>
+              </td>
+            </tr>
+            <tr style="button-margin:0">
+              <td class="cell">
+                <div class="cell-content">
+                  <video controls class="html-video">
+                    <source src="audio_noisy/0.mp4" type="video/mp4">
+                    <!-- <p>Your browser doesn't support embedded videos, but don't worry, you can <a href="videos/chem/gt/10.mp4">download it</a> and watch it with your favorite video player!</p> -->
+                  </video>
+                  <br>Noisy
+                </div>
+              </td>
+              <td class="cell">
+                <div class="cell-content">
+                  <video controls class="html-video">
+                    <source src="audio_clean_speech/0.mp4" type="video/mp4">
+                    <!-- <p>Your browser doesn't support embedded videos, but don't worry, you can <a href="videos/chem/gt_mel/10.mp4">download it</a> and watch it with your favorite video player!</p> -->
+                  </video>
+                  <br>Clean
+                </div>
+              </td>
+              <td class="cell">
+                <div class="cell-content">
+                  <video controls class="html-video">
+                    <source src="audio_enhance_audio_video/0.mp4" type="video/mp4">
+                    <!-- <p>Your browser doesn't support embedded videos, but don't worry, you can <a href="videos/chem/gt_mel/10.mp4">download it</a> and watch it with your favorite video player!</p> -->
+                  </video>
+                  <br>VC-S\(^{2}\)E
+                </div>
+              </td>
+              <td class="cell">
+                <div class="cell-content">
+                  <video controls class="html-video">
+                    <source src="audio_enhance_audio_only/0.mp4" type="video/mp4">
+                    <!-- <p>Your browser doesn't support embedded videos, but don't worry, you can <a href="videos/chem/gt_mel/10.mp4">download it</a> and watch it with your favorite video player!</p> -->
+                  </video>
+                  <br>VC-S\(^{2}\)E(<em>w/o</em> <b>E<sub>a</sub>, E<sub>v</sub></b>)
+                </div>
+              </td>
+              <td class="cell">
+                <div class="cell-content">
+                  <video controls class="html-video">
+                    <source src="video_noise/0.mp4" type="video/mp4">
+                    <!-- <p>Your browser doesn't support embedded videos, but don't worry, you can <a href="videos/chem/gt_mel/10.mp4">download it</a> and watch it with your favorite video player!</p> -->
+                  </video>
+                  <br>Noisy video
+                </div>
+              </td>
+              <td class="cell">
+                <div class="cell-content">
+                  <img src="image_gradcam/0.jpg" alt="Gradcam Image" class="html-image">
+                  <br>Gradcam
+                </div>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-
     <div class="container has-text-centered top-pad">
       <a href="#top">
         <i class="fa fa-arrow-up"></i>
       </a>
     </div>
   </div>
-
   <div class="container">
     <hr>
   </div>
-
   <h2 class="title is-2 has-text-centered">References</h2>
   <p><br>
   <ol>
@@ -145,7 +223,6 @@
   </ol>
   </p>
   <br>
-
 </body>
 
 </html>
