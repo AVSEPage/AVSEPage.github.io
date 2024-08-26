@@ -131,11 +131,7 @@
         <font color=#0000FF>VC-S<sup>2</sup>E(Our)</font>
       </b>: We propose a new model that leverages audio-visual modalities to improve speech quality and intelligibility.
     </li>
-    <li><b>VC-S<sup>2</sup>E (<em>w/o</em> <b>E<sub>a</sub>, E<sub>v</sub></b>)</b>: A version of the model with only
-      audio input.
-      <br>&nbsp;&nbsp;&nbsp;&nbsp;Here, <b>E<sub>a</sub></b> and <b>E<sub>v</sub></b> represent Scenario-Aware Audio
-      Embedding and Visual Embedding, respectively. <em>w/o</em> means without.
-    </li>
+    <li><b>Conformer</b>: (TO ADD)</li>
     <li><b>Noisy video</b>: The video source of noise, used as our second modality input source.</li>
     <li><b>Gradcam</b>: Displays the middle frame of the video with the corresponding Grad-CAM heatmap, highlighting key
       noise areas identified by the video encoder.</li>
@@ -166,6 +162,21 @@
               </td>
             </tr>
             <tr style="button-margin:0">
+              <td class="cell">
+                <div class="cell-content">
+                  <video controls class="html-video">
+                    <source src="video_noise/0.mp4" type="video/mp4">
+                    <!-- <p>Your browser doesn't support embedded videos, but don't worry, you can <a href="videos/chem/gt_mel/10.mp4">download it</a> and watch it with your favorite video player!</p> -->
+                  </video>
+                  <br>Noisy video
+                </div>
+              </td>
+              <td class="cell">
+                <div class="cell-content">
+                  <img src="image_gradcam/0.jpg" alt="Gradcam Image" class="html-image">
+                  <br>Gradcam
+                </div>
+              </td>
               <td class="cell">
                 <div class="cell-content">
                   <video controls class="html-video">
@@ -202,22 +213,7 @@
                     <source src="audio_enhance_audio_only/0.mp4" type="video/mp4">
                     <!-- <p>Your browser doesn't support embedded videos, but don't worry, you can <a href="videos/chem/gt_mel/10.mp4">download it</a> and watch it with your favorite video player!</p> -->
                   </video>
-                  <br>VC-S\(^{2}\)E(<em>w/o</em> <b>E<sub>a</sub>, E<sub>v</sub></b>)
-                </div>
-              </td>
-              <td class="cell">
-                <div class="cell-content">
-                  <video controls class="html-video">
-                    <source src="video_noise/0.mp4" type="video/mp4">
-                    <!-- <p>Your browser doesn't support embedded videos, but don't worry, you can <a href="videos/chem/gt_mel/10.mp4">download it</a> and watch it with your favorite video player!</p> -->
-                  </video>
-                  <br>Noisy video
-                </div>
-              </td>
-              <td class="cell">
-                <div class="cell-content">
-                  <img src="image_gradcam/0.jpg" alt="Gradcam Image" class="html-image">
-                  <br>Gradcam
+                  <br>Conformer
                 </div>
               </td>
             </tr>
