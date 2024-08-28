@@ -7,6 +7,13 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      padding: 10px 20px;
+    }
+
     video.html-video,
     img.html-image {
       width: 200px;
@@ -35,6 +42,72 @@
       font-size: 20px;
       margin-top: 10px;
     }
+
+    .media-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .media-item {
+      margin: 0 10px;
+    }
+
+    video {
+      width: 180px;
+      height: auto;
+    }
+
+    img {
+      width: auto;
+      height: 135px;
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .image-row img {
+      width: 250px;
+      height: auto;
+      margin: 5px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #currentType {
+      display: inline-block;
+      font-size: 18px;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    .title-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .title-item {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 5px; /* Adjust spacing as needed */
+    }
+
   </style>
 </head>
 
@@ -141,84 +214,112 @@
     <div class="container">
       <h2 class="title is-2 has-text-centered">Demos</h2>
       <div class="markdown has-text-centered">
-        <table frame=void style="border:none; padding:0; margin:0">
-          <colgroup>
-            <col width="16%">
-            <col width="16%">
-            <col width="16%">
-            <col width="16%">
-            <col width="16%">
-            <col width="16%">
-          </colgroup>
-          <tbody>
-            <!-- CASE 1 -->
-            <tr style="button-margin:0">
-              <td colspan="6" style="background-color:#FFFFFF; border:none; buttom-padding:0; margin:0">
-                <b>
-                  <font size="large" color="blue">
-                    demo 0
-                  </font>
-                </b>
-              </td>
-            </tr>
-            <tr style="button-margin:0">
-              <td class="cell">
-                <div class="cell-content">
-                  <video controls class="html-video">
-                    <source src="video_noise/0.mp4" type="video/mp4">
-                    <!-- <p>Your browser doesn't support embedded videos, but don't worry, you can <a href="videos/chem/gt_mel/10.mp4">download it</a> and watch it with your favorite video player!</p> -->
-                  </video>
-                  <br>Noisy video
-                </div>
-              </td>
-              <td class="cell">
-                <div class="cell-content">
-                  <img src="image_gradcam/0.jpg" alt="Gradcam Image" class="html-image">
-                  <br>Gradcam
-                </div>
-              </td>
-              <td class="cell">
-                <div class="cell-content">
-                  <video controls class="html-video">
-                    <source src="audio_noisy/0.mp4" type="video/mp4">
-                    <!-- <p>Your browser doesn't support embedded videos, but don't worry, you can <a href="videos/chem/gt/10.mp4">download it</a> and watch it with your favorite video player!</p> -->
-                  </video>
-                  <br>Noisy
-                </div>
-              </td>
-              <td class="cell">
-                <div class="cell-content">
-                  <video controls class="html-video">
-                    <source src="audio_clean_speech/0.mp4" type="video/mp4">
-                    <!-- <p>Your browser doesn't support embedded videos, but don't worry, you can <a href="videos/chem/gt_mel/10.mp4">download it</a> and watch it with your favorite video player!</p> -->
-                  </video>
-                  <br>Clean
-                </div>
-              </td>
-              <td class="cell">
-                <div class="cell-content">
-                  <video controls class="html-video">
-                    <source src="audio_enhance_audio_video/0.mp4" type="video/mp4">
-                    <!-- <p>Your browser doesn't support embedded videos, but don't worry, you can <a href="videos/chem/gt_mel/10.mp4">download it</a> and watch it with your favorite video player!</p> -->
-                  </video>
-                  <br>
-                  <b>
-                    <font color=#0000FF>VC-S\(^{2}\)E(Our)</font>
-                  </b>
-                </div>
-              </td>
-              <td class="cell">
-                <div class="cell-content">
-                  <video controls class="html-video">
-                    <source src="audio_enhance_audio_only/0.mp4" type="video/mp4">
-                    <!-- <p>Your browser doesn't support embedded videos, but don't worry, you can <a href="videos/chem/gt_mel/10.mp4">download it</a> and watch it with your favorite video player!</p> -->
-                  </video>
-                  <br>Conformer
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <!-- Begin the content from the first HTML -->
+
+        <div class="media-row">
+            <div class="media-item">
+                <div class="title-item">0</div>
+                <video controls><source src="new_noise_video/0.mp4" type="video/mp4"></video>
+            </div>
+            <div class="media-item">
+                <div class="title-item">1</div>
+                <img src="gradcam/0.jpg" alt="0">
+            </div>
+            <div class="media-item">
+                <div class="title-item">2</div>
+                <video controls><source src="noisy_speech/0.mp4" type="video/mp4"></video>
+            </div>
+            <div class="media-item">
+                <div class="title-item">3</div>
+                <video controls><source src="clean_speech/0.mp4" type="video/mp4"></video>
+            </div>
+            <div class="media-item">
+                <div class="title-item">4</div>
+                <video controls><source src="enhanced_audio_only/0.mp4" type="video/mp4"></video>
+            </div>
+            <div class="media-item">
+                <div class="title-item">5</div>
+                <video controls><source src="enhanced_audio_video/0.mp4" type="video/mp4"></video>
+            </div>
+        </div>
+
+
+        <div class="media-row">
+            <div class="media-item"><video controls><source src="new_noise_video/0.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><img src="gradcam/0.jpg" alt="0"></div>
+            <div class="media-item"><video controls><source src="noisy_speech/0.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="clean_speech/0.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="enhanced_audio_only/0.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="enhanced_audio_video/0.mp4" type="video/mp4"></video></div>
+        </div>
+
+        <div class="media-row">
+            <div class="media-item"><video controls><source src="new_noise_video/1.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><img src="gradcam/1.jpg" alt="1"></div>
+            <div class="media-item"><video controls><source src="noisy_speech/1.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="clean_speech/1.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="enhanced_audio_only/1.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="enhanced_audio_video/1.mp4" type="video/mp4"></video></div>
+        </div>
+
+        <div class="media-row">
+            <div class="media-item"><video controls><source src="new_noise_video/2.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><img src="gradcam/2.jpg" alt="2"></div>
+            <div class="media-item"><video controls><source src="noisy_speech/2.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="clean_speech/2.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="enhanced_audio_only/2.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="enhanced_audio_video/2.mp4" type="video/mp4"></video></div>
+        </div>
+
+        <div class="media-row">
+            <div class="media-item"><video controls><source src="new_noise_video/3.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><img src="gradcam/3.jpg" alt="3"></div>
+            <div class="media-item"><video controls><source src="noisy_speech/3.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="clean_speech/3.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="enhanced_audio_only/3.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="enhanced_audio_video/3.mp4" type="video/mp4"></video></div>
+        </div>
+
+        <div class="media-row">
+            <div class="media-item"><video controls><source src="new_noise_video/4.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><img src="gradcam/4.jpg" alt="4"></div>
+            <div class="media-item"><video controls><source src="noisy_speech/4.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="clean_speech/4.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="enhanced_audio_only/4.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="enhanced_audio_video/4.mp4" type="video/mp4"></video></div>
+        </div>
+
+        <div class="media-row">
+            <div class="media-item"><video controls><source src="new_noise_video/5.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><img src="gradcam/5.jpg" alt="5"></div>
+            <div class="media-item"><video controls><source src="noisy_speech/5.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="clean_speech/5.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="enhanced_audio_only/5.mp4" type="video/mp4"></video></div>
+            <div class="media-item"><video controls><source src="enhanced_audio_video/5.mp4" type="video/mp4"></video></div>
+        </div>
+
+        <!-- Image Switcher Section -->
+        <div class="image-row" id="imageRow1">
+            <img src="noisy_speech/0_spectrum.png" alt="0">
+            <img src="noisy_speech/1_spectrum.png" alt="1">
+            <img src="noisy_speech/2_spectrum.png" alt="2">
+        </div>
+
+        <div class="image-row" id="imageRow2">
+            <img src="noisy_speech/3_spectrum.png" alt="3">
+            <img src="noisy_speech/4_spectrum.png" alt="4">
+            <img src="noisy_speech/5_spectrum.png" alt="5">
+        </div>
+
+        <div class="buttons">
+            <button onclick="switchImages('noisy_speech', 'Noisy')">Noisy</button>
+            <button onclick="switchImages('clean_speech', 'Clean')">Clean</button>
+            <button onclick="switchImages('enhanced_audio_only', 'Audio only')">Audio only</button>
+            <button onclick="switchImages('enhanced_audio_video', 'Audio video')">Audio video</button>
+            <span id="currentType">Noisy</span>
+        </div>
+
+        <!-- End of content from the first HTML -->
       </div>
     </div>
     <div class="container has-text-centered top-pad">
@@ -238,6 +339,30 @@
   </ol>
   </p>
   <br>
+
+  <script>
+    function switchImages(folder, type) {
+        const imageRow1 = document.getElementById("imageRow1");
+        const imageRow2 = document.getElementById("imageRow2");
+        const currentType = document.getElementById("currentType");
+
+        // 更新当前显示的图片类型
+        currentType.textContent = type;
+
+        // 第一排图片 (0, 1, 2)
+        for (let i = 0; i < 3; i++) {
+            const img = imageRow1.children[i];
+            img.src = `${folder}/${i}_spectrum.png`;
+        }
+
+        // 第二排图片 (3, 4, 5)
+        for (let i = 0; i < 3; i++) {
+            const img = imageRow2.children[i];
+            img.src = `${folder}/${i + 3}_spectrum.png`;
+        }
+    }
+  </script>
+
 </body>
 
 </html>
