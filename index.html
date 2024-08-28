@@ -34,6 +34,9 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
+      width: 600px;
+      /*调整这个宽度 */
+      height: auto;
     }
 
     .text-below-image {
@@ -54,13 +57,13 @@
     }
 
     video {
-      width: 180px;
-      height: auto;
+      width: 200px;
+      height: 160px;
     }
 
     img {
-      width: auto;
-      height: 135px;
+      width: 200px;
+      height: 160px;
     }
 
     .image-row {
@@ -166,8 +169,7 @@
       <div class="markdown has-text-centered">
         <div align="left" style="font-size:20px; text-align:justify">
           <p>Speech enhancement plays an essential role in various applications, and the integration of visual
-            information
-            has been demonstrated to bring substantial advantages.
+            information has been demonstrated to bring substantial advantages.
             However, existing works mainly focus on the analysis of facial and lip movements, whereas contextual visual
             cues from the surrounding environment have been overlooked:
             for example, when we see a dog bark, our brain has the innate ability to discern and filter out the barking
@@ -177,15 +179,15 @@
             as auxiliary cues to indicate the type of noise,
             which eventually improves the speech enhancement performance.
             Specifically, we propose the VC-S\(^{2}\)E method, which incorporates the Conformer and Mamba modules for
-            their
-            complementary strengths.
+            their complementary strengths.
             Extensive experiments are conducted on public MUSIC, AVSpeech and AudioSet datasets, where the results
             demonstrate the superiority of VC-S\(^{2}\)E over other competitive methods.
             We will make the source code publicly available.
             Project demo page: <a href="https://AVSEPage.github.io" target="_blank">https://AVSEPage.github.io</a></p>
         </div>
         <!-- Adding the centered image below the abstract text -->
-        <img src="image_task/task.jpg" alt="Task Image" class="center-image" style="max-width: 60%; height: auto;">
+        <img src="image_task/task.jpg" alt="Task Image" class="center-image"
+          style="max-width: 100%; width: 800px; height: auto;">
         <div class="text-below-image">
           <p>Our task</p>
         </div>
@@ -227,35 +229,37 @@
 
         <div class="media-row">
           <div class="media-item">
-            <div class="title-item">0</div>
+            <div class="title-item">Noise Video</div>
             <video controls>
               <source src="new_noise_video/0.mp4" type="video/mp4">
             </video>
           </div>
           <div class="media-item">
-            <div class="title-item">1</div>
+            <div class="title-item">Gradcam Image</div>
             <img src="gradcam/0.jpg" alt="0">
           </div>
           <div class="media-item">
-            <div class="title-item">2</div>
+            <div class="title-item">Noisy Speech</div>
             <video controls>
               <source src="noisy_speech/0.mp4" type="video/mp4">
             </video>
           </div>
           <div class="media-item">
-            <div class="title-item">3</div>
+            <div class="title-item">Clean Speech</div>
             <video controls>
               <source src="clean_speech/0.mp4" type="video/mp4">
             </video>
           </div>
           <div class="media-item">
-            <div class="title-item">4</div>
+            <div class="title-item">Conformer</div>
             <video controls>
               <source src="enhanced_audio_only/0.mp4" type="video/mp4">
             </video>
           </div>
           <div class="media-item">
-            <div class="title-item">5</div>
+            <div class="title-item"><b>
+                <font color=#0000FF>VC-S<sup>2</sup>E (Our)</font>
+              </b></div>
             <video controls>
               <source src="enhanced_audio_video/0.mp4" type="video/mp4">
             </video>
@@ -431,10 +435,13 @@
         </div>
 
         <div class="buttons">
-          <button onclick="switchImages('noisy_speech', 'Noisy')">Noisy</button>
-          <button onclick="switchImages('clean_speech', 'Clean')">Clean</button>
-          <button onclick="switchImages('enhanced_audio_only', 'Audio only')">Audio only</button>
-          <button onclick="switchImages('enhanced_audio_video', 'Audio video')">Audio video</button>
+          <button onclick="switchImages('noisy_speech', 'Noisy speech')">Noisy speech</button>
+          <button onclick="switchImages('clean_speech', 'Clean speech')">Clean speech</button>
+          <button onclick="switchImages('enhanced_audio_only', 'Conformer')">Conformer</button>
+          <button
+            onclick="switchImages('enhanced_audio_video', '<b><font color=#0000FF>VC-S<sup>2</sup>E (Our)</font></b>')"><b>
+              <font color=#0000FF>VC-S<sup>2</sup>E (Our)</font>
+            </b></button>
           <span id="currentType">Noisy</span>
         </div>
 
@@ -459,6 +466,7 @@
   </div>
   <br>
 
+
   <script>
     function switchImages(folder, type) {
       const imageRow1 = document.getElementById("imageRow1");
@@ -466,7 +474,7 @@
       const currentType = document.getElementById("currentType");
 
       // 更新当前显示的图片类型
-      currentType.textContent = type;
+      currentType.innerHTML = type;
 
       // 第一排图片 (0, 1, 2)
       for (let i = 0; i < 3; i++) {
