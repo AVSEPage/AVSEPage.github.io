@@ -34,7 +34,6 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 50%;
     }
 
     .text-below-image {
@@ -103,11 +102,11 @@
     }
 
     .title-item {
-        text-align: center;
-        font-weight: bold;
-        margin-bottom: 5px; /* Adjust spacing as needed */
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 5px;
+      /* Adjust spacing as needed */
     }
-
   </style>
 </head>
 
@@ -179,7 +178,7 @@
             Project demo page: <a href="https://AVSEPage.github.io" target="_blank">https://AVSEPage.github.io</a></p>
         </div>
         <!-- Adding the centered image below the abstract text -->
-        <img src="image_task/task.jpg" alt="Task Image" class="center-image">
+        <img src="image_task/task.jpg" alt="Task Image" class="center-image" style="max-width: 60%; height: auto;">
         <div class="text-below-image">
           <p>Our task</p>
         </div>
@@ -217,96 +216,156 @@
         <!-- Begin the content from the first HTML -->
 
         <div class="media-row">
-            <div class="media-item">
-                <div class="title-item">0</div>
-                <video controls><source src="new_noise_video/0.mp4" type="video/mp4"></video>
-            </div>
-            <div class="media-item">
-                <div class="title-item">1</div>
-                <img src="gradcam/0.jpg" alt="0">
-            </div>
-            <div class="media-item">
-                <div class="title-item">2</div>
-                <video controls><source src="noisy_speech/0.mp4" type="video/mp4"></video>
-            </div>
-            <div class="media-item">
-                <div class="title-item">3</div>
-                <video controls><source src="clean_speech/0.mp4" type="video/mp4"></video>
-            </div>
-            <div class="media-item">
-                <div class="title-item">4</div>
-                <video controls><source src="enhanced_audio_only/0.mp4" type="video/mp4"></video>
-            </div>
-            <div class="media-item">
-                <div class="title-item">5</div>
-                <video controls><source src="enhanced_audio_video/0.mp4" type="video/mp4"></video>
-            </div>
+          <div class="media-item">
+            <div class="title-item">0</div>
+            <video controls>
+              <source src="new_noise_video/0.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-item">
+            <div class="title-item">1</div>
+            <img src="gradcam/0.jpg" alt="0">
+          </div>
+          <div class="media-item">
+            <div class="title-item">2</div>
+            <video controls>
+              <source src="noisy_speech/0.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-item">
+            <div class="title-item">3</div>
+            <video controls>
+              <source src="clean_speech/0.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-item">
+            <div class="title-item">4</div>
+            <video controls>
+              <source src="enhanced_audio_only/0.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-item">
+            <div class="title-item">5</div>
+            <video controls>
+              <source src="enhanced_audio_video/0.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
 
         <div class="media-row">
-            <div class="media-item"><video controls><source src="new_noise_video/1.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><img src="gradcam/1.jpg" alt="1"></div>
-            <div class="media-item"><video controls><source src="noisy_speech/1.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="clean_speech/1.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="enhanced_audio_only/1.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="enhanced_audio_video/1.mp4" type="video/mp4"></video></div>
+          <div class="media-item"><video controls>
+              <source src="new_noise_video/1.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><img src="gradcam/1.jpg" alt="1"></div>
+          <div class="media-item"><video controls>
+              <source src="noisy_speech/1.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="clean_speech/1.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="enhanced_audio_only/1.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="enhanced_audio_video/1.mp4" type="video/mp4">
+            </video></div>
         </div>
 
         <div class="media-row">
-            <div class="media-item"><video controls><source src="new_noise_video/2.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><img src="gradcam/2.jpg" alt="2"></div>
-            <div class="media-item"><video controls><source src="noisy_speech/2.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="clean_speech/2.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="enhanced_audio_only/2.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="enhanced_audio_video/2.mp4" type="video/mp4"></video></div>
+          <div class="media-item"><video controls>
+              <source src="new_noise_video/2.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><img src="gradcam/2.jpg" alt="2"></div>
+          <div class="media-item"><video controls>
+              <source src="noisy_speech/2.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="clean_speech/2.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="enhanced_audio_only/2.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="enhanced_audio_video/2.mp4" type="video/mp4">
+            </video></div>
         </div>
 
         <div class="media-row">
-            <div class="media-item"><video controls><source src="new_noise_video/3.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><img src="gradcam/3.jpg" alt="3"></div>
-            <div class="media-item"><video controls><source src="noisy_speech/3.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="clean_speech/3.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="enhanced_audio_only/3.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="enhanced_audio_video/3.mp4" type="video/mp4"></video></div>
+          <div class="media-item"><video controls>
+              <source src="new_noise_video/3.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><img src="gradcam/3.jpg" alt="3"></div>
+          <div class="media-item"><video controls>
+              <source src="noisy_speech/3.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="clean_speech/3.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="enhanced_audio_only/3.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="enhanced_audio_video/3.mp4" type="video/mp4">
+            </video></div>
         </div>
 
         <div class="media-row">
-            <div class="media-item"><video controls><source src="new_noise_video/4.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><img src="gradcam/4.jpg" alt="4"></div>
-            <div class="media-item"><video controls><source src="noisy_speech/4.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="clean_speech/4.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="enhanced_audio_only/4.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="enhanced_audio_video/4.mp4" type="video/mp4"></video></div>
+          <div class="media-item"><video controls>
+              <source src="new_noise_video/4.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><img src="gradcam/4.jpg" alt="4"></div>
+          <div class="media-item"><video controls>
+              <source src="noisy_speech/4.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="clean_speech/4.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="enhanced_audio_only/4.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="enhanced_audio_video/4.mp4" type="video/mp4">
+            </video></div>
         </div>
 
         <div class="media-row">
-            <div class="media-item"><video controls><source src="new_noise_video/5.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><img src="gradcam/5.jpg" alt="5"></div>
-            <div class="media-item"><video controls><source src="noisy_speech/5.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="clean_speech/5.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="enhanced_audio_only/5.mp4" type="video/mp4"></video></div>
-            <div class="media-item"><video controls><source src="enhanced_audio_video/5.mp4" type="video/mp4"></video></div>
+          <div class="media-item"><video controls>
+              <source src="new_noise_video/5.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><img src="gradcam/5.jpg" alt="5"></div>
+          <div class="media-item"><video controls>
+              <source src="noisy_speech/5.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="clean_speech/5.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="enhanced_audio_only/5.mp4" type="video/mp4">
+            </video></div>
+          <div class="media-item"><video controls>
+              <source src="enhanced_audio_video/5.mp4" type="video/mp4">
+            </video></div>
         </div>
 
         <!-- Image Switcher Section -->
         <div class="image-row" id="imageRow1">
-            <img src="noisy_speech/0_spectrum.png" alt="0">
-            <img src="noisy_speech/1_spectrum.png" alt="1">
-            <img src="noisy_speech/2_spectrum.png" alt="2">
+          <img src="noisy_speech/0_spectrum.png" alt="0">
+          <img src="noisy_speech/1_spectrum.png" alt="1">
+          <img src="noisy_speech/2_spectrum.png" alt="2">
         </div>
 
         <div class="image-row" id="imageRow2">
-            <img src="noisy_speech/3_spectrum.png" alt="3">
-            <img src="noisy_speech/4_spectrum.png" alt="4">
-            <img src="noisy_speech/5_spectrum.png" alt="5">
+          <img src="noisy_speech/3_spectrum.png" alt="3">
+          <img src="noisy_speech/4_spectrum.png" alt="4">
+          <img src="noisy_speech/5_spectrum.png" alt="5">
         </div>
 
         <div class="buttons">
-            <button onclick="switchImages('noisy_speech', 'Noisy')">Noisy</button>
-            <button onclick="switchImages('clean_speech', 'Clean')">Clean</button>
-            <button onclick="switchImages('enhanced_audio_only', 'Audio only')">Audio only</button>
-            <button onclick="switchImages('enhanced_audio_video', 'Audio video')">Audio video</button>
-            <span id="currentType">Noisy</span>
+          <button onclick="switchImages('noisy_speech', 'Noisy')">Noisy</button>
+          <button onclick="switchImages('clean_speech', 'Clean')">Clean</button>
+          <button onclick="switchImages('enhanced_audio_only', 'Audio only')">Audio only</button>
+          <button onclick="switchImages('enhanced_audio_video', 'Audio video')">Audio video</button>
+          <span id="currentType">Noisy</span>
         </div>
 
         <!-- End of content from the first HTML -->
@@ -332,24 +391,24 @@
 
   <script>
     function switchImages(folder, type) {
-        const imageRow1 = document.getElementById("imageRow1");
-        const imageRow2 = document.getElementById("imageRow2");
-        const currentType = document.getElementById("currentType");
+      const imageRow1 = document.getElementById("imageRow1");
+      const imageRow2 = document.getElementById("imageRow2");
+      const currentType = document.getElementById("currentType");
 
-        // 更新当前显示的图片类型
-        currentType.textContent = type;
+      // 更新当前显示的图片类型
+      currentType.textContent = type;
 
-        // 第一排图片 (0, 1, 2)
-        for (let i = 0; i < 3; i++) {
-            const img = imageRow1.children[i];
-            img.src = `${folder}/${i}_spectrum.png`;
-        }
+      // 第一排图片 (0, 1, 2)
+      for (let i = 0; i < 3; i++) {
+        const img = imageRow1.children[i];
+        img.src = `${folder}/${i}_spectrum.png`;
+      }
 
-        // 第二排图片 (3, 4, 5)
-        for (let i = 0; i < 3; i++) {
-            const img = imageRow2.children[i];
-            img.src = `${folder}/${i + 3}_spectrum.png`;
-        }
+      // 第二排图片 (3, 4, 5)
+      for (let i = 0; i < 3; i++) {
+        const img = imageRow2.children[i];
+        img.src = `${folder}/${i + 3}_spectrum.png`;
+      }
     }
   </script>
 
